@@ -1,25 +1,29 @@
-import logo from './logo.svg';
-import './App.css';
-
-function App() {
+import React, { useContext } from 'react'
+import Loading from './components/Loading'
+import Pokevolution from './components/Pokevolution'
+import { AppContext } from './context'
+import { BrowserRouter as Router, Route } from 'react-router-dom'
+import "./App.css"
+import PokemonList from './components/PokemonList'
+const App = () => {
+  const { loading } = useContext(AppContext)
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    <>
+      <Router>
+        {loading ? <Loading /> : (
+          <div>
+            <Route exact path='/'>
+
+              <PokemonList />
+            </Route >
+            <Route path="/:id" children={<Pokevolution />} />
+          </div>
+
+        )}
+      </Router>
+    </>
+
+  )
 }
 
-export default App;
+export default App

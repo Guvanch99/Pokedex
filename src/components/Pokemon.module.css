@@ -1,0 +1,44 @@
+.container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem;
+}
+.container div{
+    width: 40%;
+height: 40%;
+}
+.types{
+    display: flex;
+   justify-content: space-between;
+
+
+}
+.img{
+    display: block;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    padding: 5px;
+    width: 20rem;
+    height: 20rem;
+   
+}
+
+.thirdCon h1{
+    margin-bottom: 4rem;
+   
+}
+.buttonShow{
+    width: 21rem;
+    background-color:orangered;
+}
+.buttonShow{
+    transform: scale(1.1);
+    background-color: crimson;
+}
+
+@media only screen and (max-width: 900px) {
+   .container{
+       flex-direction: column;
+   }
+  }

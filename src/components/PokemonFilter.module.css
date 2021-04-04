@@ -1,0 +1,19 @@
+.form{
+    position: fixed;
+    width: 90%;
+  
+}
+.label{
+    font-size: large;
+    font-weight: bold;
+}
+.select{
+    width:50%;
+    
+   
+}
+input{
+    color: white;
+    background-color: orangered;
+   
+}

@@ -1,0 +1,21 @@
+.container{
+   width: 50%;
+   margin: 0 auto;
+}
+.container li{
+    color: white;
+    margin: 0.5rem;
+}
+.id{
+    color: greenyellow;
+}
+.link{
+    text-decoration: none;
+    color: aliceblue;
+    border-bottom: 4px solid red;
+}
+.link:hover{
+    color: brown;
+    margin-top: 2px;
+   
+}
